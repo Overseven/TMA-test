@@ -144,8 +144,14 @@
             } else {
                 Telegram.WebApp.MainButton.show();
             }
-            Telegram.WebApp.showAlert(`ref: ${GetURLParameter("ref")}`)
-            Telegram.WebApp.showAlert(`startapp: ${GetURLParameter("startapp")}`)
+            let refVal = GetURLParameter("ref");
+            let startappVal = GetURLParameter("startapp");
+            console.log(`ref: ${refVal}`)
+            console.log(`startapp: ${startappVal}`)
+
+            Telegram.WebApp.showAlert(`ref: ${refVal}`)
+            Telegram.WebApp.showAlert(`startapp: ${startappVal}`)
+
         };
 
         function setViewportData() {
